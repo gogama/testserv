@@ -103,10 +103,17 @@ func (h *Handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	// Pause for the delay time specified before writing the body.
 	time.Sleep(inst.BodyDelay)
 
+	// Special case for empty body.
+	serviceTime := inst.BodyServiceTime
+	if len(body) == 0 {
+		time.Sleep(serviceTime)
+		_, _ = w.Write(nil)
+		return
+	}
+
 	// Write the body one byte at a time, pausing and flushing between each byte
 	// and overall ensuring the time taken to write the body takes the specified
 	// service duration.
-	serviceTime := inst.BodyServiceTime
 	bytePause := serviceTime / time.Duration(len(body))
 	serviceStart := time.Now()
 	for i := 0; i < len(body)-1; i++ {
