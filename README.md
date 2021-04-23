@@ -1,6 +1,8 @@
 testserv - Control a test HTTP server with simple instructions
 ==============================================================
 
+[![Build Status](https://travis-ci.com/gogama/testserv.svg)](https://travis-ci.com/gogama/testserv) [![Go Report Card](https://goreportcard.com/badge/github.com/gogama/testserv)](https://goreportcard.com/report/github.com/gogama/testserv) [![PkgGoDev](https://pkg.go.dev/badge/github.com/gogama/testserv)](https://pkg.go.dev/github.com/gogama/testserv)
+
 Getting Started
 ===============
 
