@@ -1,5 +1,5 @@
-# testserv - Control a test HTTP server with simple instructions
-================================================================
+testserv - Control a test HTTP server with simple instructions
+==============================================================
 
 Getting Started
 ===============
